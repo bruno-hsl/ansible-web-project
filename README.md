@@ -34,19 +34,23 @@ Git instalado (para versionamento e controle do projeto)
 
 ansible-web-project/
 │
-├── hosts                   # Inventário de servidores
+├── hosts
 ├── playbooks/
-│   └── site.yml            # Playbook principal
-├── roles/                  # Diretório de roles
-│   ├── webserver/          # Configuração do servidor web
-│   │   ├── tasks/main.yml
-│   │   ├── handlers/main.yml
-│   │   └── templates/index.html.j2
-│   ├── firewall/           # Configuração do firewall
+│   └── site.yml
+├── roles/
+│   ├── webserver/
+│   │   ├── tasks/
+│   │   │   └── main.yml
+│   │   ├── handlers/
+│   │   │   └── main.yml
+│   │   └── templates/
+│   │       └── index.html.j2
+│   ├── firewall/
 │   │   └── tasks/main.yml
-│   └── users/              # Criação e gerenciamento de usuários
+│   └── users/
 │       └── tasks/main.yml
 └── README.md
+
 
 🏗 Detalhes das Roles
 webserver/ 🌐
