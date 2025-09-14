@@ -30,28 +30,6 @@ Acesso root ou sudo nos servidores remotos
 
 Git instalado (para versionamento e controle do projeto)
 
-🗂 Estrutura do Projeto
-
-ansible-web-project/
-│
-├── hosts
-├── playbooks/
-│   └── site.yml
-├── roles/
-│   ├── webserver/
-│   │   ├── tasks/
-│   │   │   └── main.yml
-│   │   ├── handlers/
-│   │   │   └── main.yml
-│   │   └── templates/
-│   │       └── index.html.j2
-│   ├── firewall/
-│   │   └── tasks/main.yml
-│   └── users/
-│       └── tasks/main.yml
-└── README.md
-
-
 🏗 Detalhes das Roles
 webserver/ 🌐
 
