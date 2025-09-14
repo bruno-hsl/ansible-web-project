@@ -20,8 +20,6 @@ O objetivo é criar uma infraestrutura automatizada, segura e replicável.
 
 📋 Pré-requisitos
 
-Antes de rodar o playbook, verifique se você tem:
-
 Servidores Linux (Debian/CentOS) com SSH ativo
 
 Ansible instalado na máquina local
