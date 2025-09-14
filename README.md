@@ -1,22 +1,26 @@
-Ansible Web Project
+🚀 Ansible Web Project
 
-Este projeto demonstra o uso do Ansible para automatizar o provisionamento e configuração de servidores Linux. O playbook realiza tarefas essenciais de infraestrutura, como:
+Um projeto de automação de infraestrutura com Ansible, que provisiona servidores Linux de forma rápida, padronizada e segura. Ideal para aprendizado, demonstração de habilidades ou ambientes de teste.
 
-Atualização de pacotes do sistema
+✨ O que este projeto faz
 
-Instalação e configuração do servidor web Nginx
+O playbook executa as seguintes tarefas:
 
-Configuração de firewall para portas essenciais (22, 80, 443)
+🛠 Atualização do sistema – mantém os pacotes sempre atualizados
 
-Criação de usuários e definição de permissões
+🌐 Instalação e configuração do Nginx – servidor web pronto para uso
 
-Provisionamento de páginas HTML dinâmicas usando Jinja2
+🔥 Configuração de firewall – abre portas essenciais: 22, 80, 443
 
-O objetivo é criar uma infraestrutura padronizada e segura, totalmente automatizada, ideal para aprendizado, testes e demonstração de habilidades em Ansible.
+👤 Gerenciamento de usuários – criação de contas e definição de permissões
 
-Pré-requisitos
+📄 Provisionamento de páginas HTML dinâmicas – usando Jinja2
 
-Antes de executar o playbook, verifique se você possui:
+O objetivo é criar uma infraestrutura automatizada, segura e replicável.
+
+📋 Pré-requisitos
+
+Antes de rodar o playbook, verifique se você tem:
 
 Servidores Linux (Debian/CentOS) com SSH ativo
 
@@ -26,46 +30,37 @@ Acesso root ou sudo nos servidores remotos
 
 Git instalado (para versionamento e controle do projeto)
 
-Estrutura do Projeto
+🗂 Estrutura do Projeto
+
 ansible-web-project/
 │
 ├── hosts                   # Inventário de servidores
 ├── playbooks/
 │   └── site.yml            # Playbook principal
 ├── roles/                  # Diretório de roles
-│   ├── webserver/
-│   │   ├── tasks/
-│   │   │   └── main.yml   # Tarefas do webserver
-│   │   ├── handlers/
-│   │   │   └── main.yml   # Ações notificadas, como reiniciar serviços
-│   │   └── templates/
-│   │       └── index.html.j2 # Template Jinja2 para páginas web
-│   ├── firewall/
-│   │   └── tasks/main.yml # Configurações de firewall
-│   └── users/
-│       └── tasks/main.yml # Criação de usuários e permissões
+│   ├── webserver/          # Configuração do servidor web
+│   │   ├── tasks/main.yml
+│   │   ├── handlers/main.yml
+│   │   └── templates/index.html.j2
+│   ├── firewall/           # Configuração do firewall
+│   │   └── tasks/main.yml
+│   └── users/              # Criação e gerenciamento de usuários
+│       └── tasks/main.yml
 └── README.md
 
-Detalhes das Roles
-webserver/
+🏗 Detalhes das Roles
+webserver/ 🌐
 
-Responsável por instalar e configurar o servidor web.
+tasks/main.yml → Instala e configura o Nginx
 
-tasks/main.yml → Instalação e configuração do Nginx
+handlers/main.yml → Reinicia serviços quando necessário
 
-handlers/main.yml → Tarefas executadas sob notificação (ex: reiniciar o serviço web)
+templates/index.html.j2 → Template HTML dinâmico
 
-templates/index.html.j2 → Página HTML dinâmica renderizada pelo Ansible
+firewall/ 🔥
 
-firewall/
+tasks/main.yml → Configura regras de firewall e abre portas essenciais
 
-Gerencia a configuração do firewall.
+users/ 👤
 
-tasks/main.yml → Abre portas específicas (22, 80, 443) e aplica regras de segurança
-
-users/
-
-Administra contas de usuários.
-
-tasks/main.yml → Criação de usuários, definição de senhas e permissões
-
+tasks/main.yml → Cria usuários, define senhas e permissões
