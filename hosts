@@ -1,0 +1,9 @@
+[webservers]
+
+172.238.200.169
+172.238.200.166
+
+[all:vars]
+
+ansible_user=root
+ansible_ssh_private_file=/root/.ssh/id_ed25519

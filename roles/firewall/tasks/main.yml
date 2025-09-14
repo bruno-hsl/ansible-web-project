@@ -1,0 +1,19 @@
+
+---
+- name: inatalar UFW
+  package:
+    name: ufw
+    state: present
+
+- name: liberar ssh, http e https
+  ufw:
+    rule: allow
+    port: "{{  item }}"
+  loop:
+    - 22
+    - 80
+    - 443
+
+-name: Ativar UFW
+ ufw:
+   state: enabled

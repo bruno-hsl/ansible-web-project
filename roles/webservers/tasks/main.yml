@@ -1,0 +1,19 @@
+
+---
+- name: Instalar Nginx
+  package:
+    name: nginx
+    state: present
+
+- name: Garantir que o Nginx este ja ativo
+  service:
+  name: nginx
+  state: started
+  enabled: yes
+
+- name: Deploy na pagina web
+  template:
+    src: index.html
+    dest: /var/www/html/index.html
+  notify:
+    - restart nginx

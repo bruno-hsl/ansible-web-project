@@ -1,0 +1,9 @@
+---
+- name: configurar infraestrutura web completa
+  hosts: webservers
+  become: yes
+
+  roles:
+    - users
+    - firewall
+    - webserver
