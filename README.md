@@ -1,6 +1,6 @@
 🚀 Ansible Web Project
 
-Um projeto de automação de infraestrutura com Ansible, que provisiona servidores Linux de forma rápida, padronizada e segura. Ideal para aprendizado, demonstração de habilidades ou ambientes de teste.
+Um projeto de automação de infraestrutura com Ansible, que provisiona servidores Linux de forma rápida, padronizada e segura.
 
 ✨ O que este projeto faz
 
