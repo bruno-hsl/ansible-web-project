@@ -2,6 +2,8 @@
 
 Um projeto de automação de infraestrutura com Ansible, que provisiona servidores Linux de forma rápida, padronizada e segura.
 
+Servidor rodando com Nginx: http://172.238.200.166/
+
 ✨ O que este projeto faz
 
 O playbook executa as seguintes tarefas:
